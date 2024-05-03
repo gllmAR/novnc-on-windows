@@ -15,7 +15,7 @@ python -m pip install numpy > NUL
 :: Clone noVNC if not already present
 SET "SCRIPT_DIR=%~dp0"
 IF NOT EXIST "%SCRIPT_DIR%noVNC" (
-    python -c "import os; os.system('git clone https://github.com/novnc/noVNC \\"%SCRIPT_DIR%noVNC\\"')"
+    python -c "import os; os.system(r'git clone https://github.com/novnc/noVNC \"%SCRIPT_DIR%noVNC\"')"
 )
 
 :: Create a shortcut to start-novnc-proxy.bat in the Startup folder
