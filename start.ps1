@@ -7,8 +7,8 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Define the path to the executable and its arguments
 $executable = "C:\Program Files\Git\bin\bash.exe"
-$arguments = "-c 'cd `"$scriptDir`" && ./novnc/utils/novnc_proxy'"
-
+$arguments = "-c 'cd `"$scriptDir`" && ./novnc/utils/novnc_proxy --listen 0.0.0.0:6080'"
+ 
 # Create a hidden process
 $psi = New-Object System.Diagnostics.ProcessStartInfo
 $psi.FileName = $executable
